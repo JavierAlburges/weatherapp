@@ -74,3 +74,8 @@ WeatherApp es una aplicación desarrollada con React Native y Expo que permite a
 ## Licencia
 
 Este proyecto está bajo la licencia MIT.
+
+## Autor
+
+Nombre del Autor: Javier Alburges
+Contacto: javieralburges@gmail.com
