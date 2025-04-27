@@ -5,6 +5,7 @@ import AutocompleteInput from "../componts/AutocompleteInput";
 import WeatherInfo from "../componts/WeatherInfo";
 import SearchHistory from "../componts/SearchHistory";
 import { createAnonymousUser } from "../utils/supabase";
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 export default function Index() {
   const [selectedCity, setSelectedCity] = useState("");
@@ -36,6 +37,14 @@ export default function Index() {
 
   return (
     <View style={styles.container}>
+      {!selectedCity && (
+        <MaterialCommunityIcons
+          name="weather-cloudy"
+          size={100}
+          color="gray"
+          style={styles.weatherIcon}
+        />
+      )}
       <Text style={styles.title}>Selecciona una ciudad</Text>
       <AutocompleteInput
         onSelect={(city) => setSelectedCity(city)}
@@ -65,5 +74,8 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: "gray",
     marginTop: 20,
+  },
+  weatherIcon: {
+    marginBottom: 20,
   },
 });
