@@ -8,6 +8,7 @@ interface SearchHistoryProps {
 }
 
 const SearchHistory: React.FC<SearchHistoryProps> = ({ onSelect, triggerUpdate }) => {
+  // Estado para almacenar el historial de búsquedas
   const [history, setHistory] = useState<string[]>([]);
 
   useEffect(() => {

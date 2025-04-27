@@ -13,7 +13,7 @@ export default function RootLayout() {
       <Stack screenOptions={{ 
         headerTitle: 'Clima App', 
         headerStyle: { backgroundColor: '#87CEEB' }, 
-        headerTitleAlign: 'center' // Centrar el título
+        headerTitleAlign: 'center'
       }} />
     </View>
   );
