@@ -1,50 +1,76 @@
-# Welcome to your Expo app 👋
+# WeatherApp
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+WeatherApp es una aplicación desarrollada con React Native y Expo que permite a los usuarios consultar el clima actual de diferentes ciudades, agregar ciudades a una lista de favoritos y ver un historial de búsquedas recientes.
 
-## Get started
+## Características principales
 
-1. Install dependencies
+- **Consulta del clima**: Obtén información detallada sobre el clima actual, incluyendo temperatura, condiciones climáticas, velocidad del viento, humedad y hora local.
+- **Favoritos**: Agrega o elimina ciudades de tu lista de favoritos para un acceso rápido.
+- **Historial de búsquedas**: Visualiza las últimas 5 ciudades buscadas.
+
+## Requisitos previos
+
+- Node.js (versión 14 o superior)
+- Expo CLI instalado globalmente (`npm install -g expo-cli`)
+- Un dispositivo físico o emulador para probar la aplicación
+
+## Instalación
+
+1. Clona este repositorio:
+
+   ```bash
+   git clone <URL_DEL_REPOSITORIO>
+   cd weatherapp
+   ```
+
+2. Instala las dependencias:
 
    ```bash
    npm install
    ```
 
-2. Start the app
+3. Crea un archivo `.env` en la raíz del proyecto con las siguientes variables de entorno:
 
-   ```bash
-    npx expo start
+   ```env
+   EXPO_PUBLIC_SUPABASE_URL=<TU_SUPABASE_URL>
+   EXPO_PUBLIC_SUPABASE_ANON_KEY=<TU_SUPABASE_ANON_KEY>
+   EXPO_PUBLIC_WEATHER_API_KEY=<TU_API_KEY_DE_WEATHERAPI>
    ```
 
-In the output, you'll find options to open the app in a
+## Uso
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+1. Inicia la aplicación:
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+   ```bash
+   npx expo start
+   ```
 
-## Get a fresh project
+2. Escanea el código QR con la aplicación Expo Go en tu dispositivo móvil o utiliza un emulador para abrir la aplicación.
 
-When you're ready, run:
+3. Escribe el nombre de una ciudad en el campo de búsqueda para consultar el clima actual.
 
-```bash
-npm run reset-project
-```
+4. Agrega ciudades a favoritos tocando el ícono de estrella o elimínalas tocando el ícono de papelera.
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+5. Selecciona una ciudad del historial de búsquedas para consultar nuevamente su clima.
 
-## Learn more
+## Estructura del proyecto
 
-To learn more about developing your project with Expo, look at the following resources:
+- **app/**: Contiene las pantallas principales de la aplicación.
+- **componts/**: Componentes reutilizables como `AutocompleteInput`, `SearchHistory` y `WeatherInfo`.
+- **utils/**: Funciones auxiliares para interactuar con Supabase y la API de Weather.
+- **assets/**: Recursos estáticos como imágenes y fuentes.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## Tecnologías utilizadas
 
-## Join the community
+- React Native
+- Expo
+- Supabase
+- WeatherAPI
 
-Join our community of developers creating universal apps.
+## Contribuciones
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+¡Las contribuciones son bienvenidas! Si deseas contribuir, por favor abre un issue o envía un pull request.
+
+## Licencia
+
+Este proyecto está bajo la licencia MIT.
